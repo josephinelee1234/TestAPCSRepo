@@ -7,11 +7,23 @@ public class Demo{
    System.out.println();
   }
  }
-
- public static void main(String[] args){
-  if (args.length == 1){
-   printLoop(Integer.parseInt(args[0]));
+ public String arrToString(int[] arr){
+   String ans = "";
+   ans += "{";
+   for(int i = 0; i<arr.length; i++){
+     String aa = Integer.toString(arr[i]);
+     ans += aa;
+     if (i != arr.length-1){
+       ans += ", ";
+     }
+   }
+   ans += "}";
+   return ans;
  }
+  public static void main(String[] args){
+    if (args.length == 1){
+      printLoop(Integer.parseInt(args[0]));
+    }
   else{
    printLoop(5);
   }
