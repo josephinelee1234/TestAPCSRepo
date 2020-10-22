@@ -31,6 +31,15 @@ public class Demo{
 		a += arrToString(arr[arr.length-1]) +"}";
 		return a;
 	}
+  public static int[][] create2DArray(int rows, int cols, int maxValue){
+		int[][] ar = new int[rows][cols];
+		for(int i=0; i<rows; i++){
+			for(int j=0; j<cols; j++){
+				ar[i][j] = (int) (Math.random() * (maxValue + 1));
+			}
+		}
+		return ar;
+	}
   public static void main(String[] args){
     if (args.length == 1){
       printLoop(Integer.parseInt(args[0]));
@@ -38,5 +47,6 @@ public class Demo{
   else{
    printLoop(5);
   }
+
  }
 }
