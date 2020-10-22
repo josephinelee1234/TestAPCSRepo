@@ -58,9 +58,9 @@ public class Demo{
   else{
    printLoop(5);
   }
-  int[][] a = create2DArray(5,4,4);
-  int[][] b = create2DArrayRandomized(6,4,10);
-  System.out.println(arrayDeepToString(a));
-  System.out.println(arrayDeepToString(b));
+  //int[][] a = create2DArray(5,4,4);
+  //int[][] b = create2DArrayRandomized(6,4,10);
+  //System.out.println(arrayDeepToString(a));
+  //System.out.println(arrayDeepToString(b));
  }
 }
