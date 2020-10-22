@@ -20,6 +20,17 @@ public class Demo{
    ans += "}";
    return ans;
  }
+ public static String arrayDeepToString(int[][] arr){
+		if(arr.length == 0){
+			return "{}";
+		}
+		String a = "{";
+		for(int i = 0; i<arr.length-1; i++){
+			a += arrToString(arr[i]) + ", ";
+		}
+		a += arrToString(arr[arr.length-1]) +"}";
+		return a;
+	}
   public static void main(String[] args){
     if (args.length == 1){
       printLoop(Integer.parseInt(args[0]));
