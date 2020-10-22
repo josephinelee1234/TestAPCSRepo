@@ -7,7 +7,7 @@ public class Demo{
    System.out.println();
   }
  }
- public String arrToString(int[] arr){
+ public static String arrToString(int[] arr){
    String ans = "";
    ans += "{";
    for(int i = 0; i<arr.length; i++){
@@ -40,6 +40,17 @@ public class Demo{
 		}
 		return ar;
 	}
+  public static int[][] create2DArrayRandomized(int rows, int cols, int maxValue){
+		int[][] ar = new int[rows][];
+		for(int i=0; i<rows; i++){
+			int c = (int)((cols+1) * Math.random());
+			ar[i] = new int[c];
+			for(int j=0; j<c; j++){
+				ar[i][j] = (int) ((maxValue + 1) * Math.random());
+			}
+		}
+		return ar;
+	}
   public static void main(String[] args){
     if (args.length == 1){
       printLoop(Integer.parseInt(args[0]));
@@ -47,6 +58,9 @@ public class Demo{
   else{
    printLoop(5);
   }
-
+  int[][] a = create2DArray(5,4,4);
+  int[][] b = create2DArrayRandomized(6,4,10);
+  System.out.println(arrayDeepToString(a));
+  System.out.println(arrayDeepToString(b));
  }
 }
